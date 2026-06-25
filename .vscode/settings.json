@@ -1,0 +1,9 @@
+{
+    "chat.mcp.serverSampling": {
+        "cibersecurity/.vscode/mcp.json: my-mcp-server-7eada684": {
+            "allowedModels": [
+                "ollama/Ollama/qwen3.5:4b"
+            ]
+        }
+    }
+}

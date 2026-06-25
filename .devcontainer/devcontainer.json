@@ -1,0 +1,36 @@
+{
+  "name": "Python3 - Cibersecurity DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  "remoteUser": "vscode",
+  // "containerEnv": {
+  //   "SHELL": "/usr/bin/zsh"
+  // },
+  // "postCreateCommand": "sudo apt update && sudo apt install -y nodejs npm && sudo npm install -g @modelcontextprotocol/server-filesystem ",
+  "customizations": {
+  //   "vscode": {
+  //     "settings": {
+  //       "terminal.integrated.defaultProfile.linux": "zsh",
+  //       "terminal.integrated.profiles.linux": {
+  //         "zsh": {
+  //           "path": "/usr/bin/zsh"
+  //         }
+  //       }
+  //     },
+      "extensions": [
+        "Continue.continue"
+      ]
+  //   }
+  },
+  "portsAttributes": {
+    "11434": {
+      "label": "11434"
+    }
+  },
+   "runArgs": [
+    "--network=ollama"
+  ],
+  "features": {
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0" : {}
+    // "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0" :{}
+  }
+}

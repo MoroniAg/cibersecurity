@@ -1,0 +1,14 @@
+{
+	"servers": {
+		"my-mcp-server-7eada684": {
+			"type": "stdio",
+			 "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/workspaces/cibersecurity"
+      ]
+	}
+	},
+	"inputs": []
+}
