@@ -1,0 +1,6 @@
+
+TIMEOUT = 1
+THREAD_LIMIT = 1000
+HOST = "example.com"
+PORT_START = 1
+PORT_END = 1025

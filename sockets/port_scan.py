@@ -23,7 +23,7 @@ def scan_host(host: str)-> list[int]:
 def main():
 
 
-    host = "example.com"
+    host = HOST
     open_ports = scan_host(host)
 
     print(open_ports)
