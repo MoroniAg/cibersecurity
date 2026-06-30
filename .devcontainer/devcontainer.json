@@ -6,7 +6,7 @@
   //   "SHELL": "/usr/bin/zsh"
   // },
   // "postCreateCommand": "sudo apt update && sudo apt install -y nodejs npm && sudo npm install -g @modelcontextprotocol/server-filesystem ",
-  "customizations": {
+  // "customizations": {
   //   "vscode": {
   //     "settings": {
   //       "terminal.integrated.defaultProfile.linux": "zsh",
@@ -16,11 +16,11 @@
   //         }
   //       }
   //     },
-      "extensions": [
-        "Continue.continue"
-      ]
+      // "extensions": [
+      //   "Continue.continue"
+      // ]
   //   }
-  },
+  // },
   "portsAttributes": {
     "11434": {
       "label": "11434"
