@@ -1,0 +1,14 @@
+{
+    "host": "example.com",
+    "ip": "172.66.147.243",
+    "results": [
+        {
+            "port": 80,
+            "banner": null
+        },
+        {
+            "port": 443,
+            "banner": null
+        }
+    ]
+}
