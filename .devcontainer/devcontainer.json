@@ -16,9 +16,6 @@
   //         }
   //       }
   //     },
-      // "extensions": [
-      //   "Continue.continue"
-      // ]
   //   }
   // },
   "portsAttributes": {
@@ -26,11 +23,19 @@
       "label": "11434"
     }
   },
-   "runArgs": [
+  "runArgs": [
     "--network=ollama"
   ],
   "features": {
-    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0" : {}
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
     // "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0" :{}
+  },
+  "postCreateCommand": "pip install -r ./requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Continue.continue"
+      ]
+    }
   }
 }
