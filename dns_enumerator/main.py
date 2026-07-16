@@ -1,6 +1,7 @@
 import argparse
 
 from dns_enum import get_a_records
+from dns_enum import reverse_lookup
 
 
 def main():
@@ -9,35 +10,42 @@ def main():
         description="DNS Enumerator"
     )
 
-    parser.add_argument(
-        "host",
+    group = parser.add_mutually_exclusive_group(required=True)
+
+    group.add_argument(
+        "--host",
         help="Dominio a consultar"
     )
 
+    group.add_argument(
+        "--ip",
+        help="IP para realizar Reverse DNS"
+    )
+
     args = parser.parse_args()
-    records = []
-    records.append(get_a_records(args.host, "A"))
-    records.append(get_a_records(args.host, "AAAA"))
-    records.append(get_a_records(args.host, "MX"))
-    records.append(get_a_records(args.host, "NS"))
 
-    # print("\nA Records")
-    # print("-" * 30)
+    if args.host:
 
-    if not records:
+        print("\n===== A =====")
+        print(get_a_records(args.host, "A"))
 
-        print("No encontrados")
+        print("\n===== AAAA =====")
+        print(get_a_records(args.host, "AAAA"))
 
-        return
+        print("\n===== MX =====")
+        print(get_a_records(args.host, "MX"))
 
-    for record in records:
+        print("\n===== NS =====")
+        print(get_a_records(args.host, "NS"))
 
-        print(record["type"])
-        for rec in record["records"]:
-            print(f"IP: {rec}")
-        # print(record.records)
+        print("\n===== TXT =====")
+        print(get_a_records(args.host, "TXT"))
+
+    elif args.ip:
+
+        print("\n===== PTR =====")
+        print(reverse_lookup(args.ip))
 
 
 if __name__ == "__main__":
-
     main()
